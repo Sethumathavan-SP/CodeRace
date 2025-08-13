@@ -1,0 +1,16 @@
+# Eclipse & IDE files
+/.metadata/
+/bin/
+/target/
+/.settings/
+
+# Logs & temp
+*.log
+*.tmp
+
+# Compiled files
+*.class
+
+# OS files
+Thumbs.db
+.DS_Store
