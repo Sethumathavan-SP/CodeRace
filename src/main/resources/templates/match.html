@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="/script.js"></script>
+</head>
+<body id="match-body">
+    <div id="top-bar"></div>
+    <div id = "required-content">
+        <div id="question-panel"></div>
+        <div id="monaco-editor"></div>
+    </div>
+    <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+    <script>
+        
+        require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.45.0/min/vs' } });
+        require(['vs/editor/editor.main'], function () {
+            monaco.editor.create(document.getElementById('monaco-editor'), {
+                language: 'python',
+                theme:'vs-dark',
+                lineNumbers: 'on',
+                minimap: {
+                    enabled: false
+                },
+                suggestOnTriggerCharacters: false,
+                quickSuggestions: false,
+                wordBasedSuggestions: false,
+                parameterHints: {
+                    enabled: false
+                }
+            });
+        });
+    </script>
+</html>
