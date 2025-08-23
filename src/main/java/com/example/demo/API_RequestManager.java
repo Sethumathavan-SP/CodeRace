@@ -18,4 +18,9 @@ public class API_RequestManager {
     public boolean login(@RequestBody Map<String,String> login) {
         return DAO_Manager.checkUser(login.get("email"),login.get("password"));
     }
+    
+    @PostMapping("/signup")
+    public boolean signup(@RequestBody Map<String,String> signup) {
+    	return DAO_Manager.signUp(signup);
+    }
 }
